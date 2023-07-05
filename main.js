@@ -20,7 +20,7 @@ function tirar_foto(){
 
 console.log("ml5 version:", ml5.version);
 
-var classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/0P3vjRfxq/model.json", model_loaded);
+var classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/6VCE8eYb0/model.json", model_loaded);
 
 function model_loaded(){
     console.log("modelo carregado")
