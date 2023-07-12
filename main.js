@@ -31,7 +31,7 @@ function fala(){
     var fala_convertida=new SpeechSynthesisUtterance(dado_da_fala1);
     texto_fala.speak(fala_convertida);
 }
-function prever_a_emocao(){
+function prever_o_gesto(){
     var imagem=document.getElementById("foto");
     classifier.classify(imagem, got_results);
 }
