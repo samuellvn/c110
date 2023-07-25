@@ -40,7 +40,7 @@ function got_results(error, results){
         console.error(error);
     }
     else{
-        console.log(results);
+        console.log(resultsgestName);
         document.getElementById("resultEmotionName").innerHTML=results[0].label;
     }
 }
