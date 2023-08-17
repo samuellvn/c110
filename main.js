@@ -26,7 +26,7 @@ function model_loaded(){
     console.log("modelo carregado")
 }
 function fala(){
-    var texto_fala=window.SpeechSynthesis;
+    var texto_fala=window.speechSynthesis;
     var dado_da_fala1="a primeira previsão é "+Previsao1;
     var fala_convertida=new SpeechSynthesisUtterance(dado_da_fala1);
     texto_fala.speak(fala_convertida);
@@ -40,7 +40,19 @@ function got_results(error, results){
         console.error(error);
     }
     else{
-        console.log(resultsgestName);
-        document.getElementById("resultEmotionName").innerHTML=results[0].label;
+        console.log(results);
+        document.getElementById("resultgestName").innerHTML=results[0].label;
+        Previsao1=results[0].label;
+        fala();
+        if(Previsao1=="joia"){
+            document.getElementById("update_emoji").innerHTML="&#128077";
+        }
+        if(Previsao1=="paz"){
+            document.getElementById("update_emoji").innerHTML="&#9996;";
+        }
+        if(Previsao1=="tranquilo"){
+            document.getElementById("update_emoji").innerHTML="&#129305;";
+        }
     }
+    
 }
